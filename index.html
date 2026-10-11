@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sangai Karuppatti Coffie | South Indian Food, Sankarankoil</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Hind+Madurai:wght@400;500;600&display=swap">
+<style>
+:root{--leaf:#1d5c3b;--leaf2:#2f7d52;--gold:#f3b21b;--chilli:#c9302a;--coffee:#2a1810;--rice:#fbf6e9;
+--bg:#fbf6e9;--ink:#2a1810;--card:#fff;--muted:#6b5446;--line:#e6d9bd;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b100a;--ink:#f6ecd6;--card:#2a1a11;--muted:#c9b59c;--line:#46301f}}
+:root[data-theme="dark"]{--bg:#1b100a;--ink:#f6ecd6;--card:#2a1a11;--muted:#c9b59c;--line:#46301f}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Hind Madurai",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;background:color-mix(in srgb,var(--coffee) 92%,transparent);backdrop-filter:blur(8px);color:#f6ecd6}
+nav b{font:800 1.15rem Fraunces,serif;color:var(--gold)}
+nav div{display:flex;gap:22px}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{color:var(--gold)}
+@media(max-width:620px){nav div{gap:12px;font-size:.9rem}nav b{font-size:1rem}}
+/* HERO */
+.hero{min-height:calc(100vh - 56px);background:radial-gradient(ellipse at 70% 40%,#5a3320 0,var(--coffee) 62%);color:#f6ecd6;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2vw;padding:5vh 5vw;overflow:hidden;position:relative}
+.hero h1{font-size:clamp(2.4rem,6vw,4.8rem);font-weight:800;animation:rise 1s both}
+.hero h1 span{display:block;color:var(--gold)}
+.hero p{max-width:34ch;color:#e9d9bb;font-size:1.15rem;animation:rise 1s .25s both}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;animation:rise 1s .5s both}
+.btn{padding:14px 26px;border-radius:50px;text-decoration:none;font-weight:600;transition:transform .2s,box-shadow .2s;border:2px solid var(--gold)}
+.btn.p{background:var(--gold);color:var(--coffee);box-shadow:0 8px 0 #a87a08}
+.btn.p:hover{transform:translateY(4px);box-shadow:0 4px 0 #a87a08}
+.btn.s{color:var(--gold)}.btn.s:hover{background:rgba(243,178,27,.15)}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+.scene{perspective:1100px;height:min(78vw,520px);display:grid;place-items:center}
+.world{position:relative;width:min(74vw,440px);aspect-ratio:1;transform-style:preserve-3d;transform:rotateX(54deg) rotateZ(var(--rz,0deg))}
+.plate{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,#3b9a63 0,var(--leaf2) 55%,var(--leaf) 100%);box-shadow:0 0 0 14px #e8c872,0 0 0 18px #b8892b,0 60px 60px rgba(0,0,0,.55);transform:translateZ(0)}
+.plate:before{content:"";position:absolute;inset:12%;border-radius:50%;border:3px dashed rgba(255,255,255,.25)}
+.it{position:absolute;font-size:clamp(2.6rem,7vw,4.4rem);transform:translate(-50%,-50%) translateZ(46px) rotateZ(calc(var(--rz,0deg)*-1)) rotateX(-54deg);filter:drop-shadow(0 18px 10px rgba(0,0,0,.45));animation:bob 3s ease-in-out infinite;cursor:default}
+@keyframes bob{50%{margin-top:-16px}}
+.steam{position:absolute;left:50%;top:50%;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.35);filter:blur(10px);transform:translate(-50%,-50%) translateZ(60px) rotateX(-54deg);animation:steam 3.4s ease-out infinite}
+@keyframes steam{to{opacity:0;margin-top:-190px;scale:2.6}}
+@media(max-width:820px){.hero{grid-template-columns:1fr;text-align:center;justify-items:center}.cta{justify-content:center}}
+/* MARQUEE */
+.mq{background:var(--gold);color:var(--coffee);overflow:hidden;white-space:nowrap;font:800 1.35rem Fraunces,serif;padding:14px 0;transform:rotate(-1.2deg);margin:-14px -10px 0;position:relative;z-index:3}
+.mq div{display:inline-block;animation:mq 38s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:90px 5vw}
+.in{max-width:1100px;margin:auto}
+h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:56ch}
+.rv{opacity:0;transform:translateY(30px);transition:.8s}.rv.on{opacity:1;transform:none}
+/* STORY */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.cup{perspective:800px;display:grid;place-items:center}
+.cupbox{width:230px;height:230px;border-radius:50%;background:conic-gradient(var(--chilli),var(--gold),var(--leaf2),var(--chilli));display:grid;place-items:center;font-size:7.5rem;transform-style:preserve-3d;animation:spin 9s linear infinite;box-shadow:0 30px 50px rgba(0,0,0,.25)}
+@keyframes spin{from{transform:rotateY(0)}to{transform:rotateY(360deg)}}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.facts span{background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:30px;font-size:.95rem}
+@media(max-width:820px){.story{grid-template-columns:1fr}}
+/* MENU */
+.menu{background:linear-gradient(var(--bg),color-mix(in srgb,var(--leaf) 12%,var(--bg)))}
+.tabs{display:flex;gap:10px;margin:26px 0 34px;flex-wrap:wrap}
+.tab{font:600 1rem "Hind Madurai",sans-serif;padding:12px 22px;border-radius:50px;border:2px solid var(--leaf);background:transparent;color:var(--ink);cursor:pointer;transition:.25s}
+.tab[aria-selected=true]{background:var(--leaf);color:#fff;transform:translateY(-3px);box-shadow:0 8px 16px rgba(29,92,59,.35)}
+.time{color:var(--muted);margin:-20px 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:26px;perspective:1000px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;transform-style:preserve-3d;transition:transform .15s,box-shadow .3s;animation:pop .6s both}
+.card:hover{box-shadow:0 26px 40px rgba(42,24,16,.22)}
+@keyframes pop{from{opacity:0;transform:rotateX(-35deg) translateY(30px)}}
+.pic{height:120px;border-radius:16px;display:grid;place-items:center;font-size:4.2rem;background:radial-gradient(circle at 30% 25%,#fff3 0,transparent 60%),var(--c,var(--leaf2));transform:translateZ(40px);box-shadow:0 14px 18px rgba(0,0,0,.25)}
+.card h3{font-size:1.25rem;margin:18px 0 4px;transform:translateZ(24px)}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.pr{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-weight:600;transform:translateZ(18px)}
+.pr b{color:var(--chilli);font:800 1.2rem Fraunces,serif}
+.veg{font-size:.8rem;padding:2px 10px;border-radius:20px;background:#dff3e5;color:#14502f}
+.veg.nv{background:#fbe0dd;color:#8e1d18}
+.note{margin-top:28px;color:var(--muted);font-size:.9rem}
+/* VISIT */
+.visit{background:var(--coffee);color:#f6ecd6}
+.visit .lead{color:#d9c6a6}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:34px}
+.vc{background:#3a2316;border:1px solid #5a3a26;border-radius:20px;padding:26px;transition:transform .3s}
+.vc:hover{transform:translateY(-8px) rotateX(6deg)}
+.vc i{font-style:normal;font-size:2rem}
+.vc h3{font-size:1.3rem;margin:10px 0 6px;color:var(--gold)}
+.vc a{color:var(--gold)}
+footer{background:#140b06;color:#bba98f;text-align:center;padding:30px 5vw;font-size:.95rem}
+footer b{color:var(--gold);font-family:Fraunces,serif}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><b>Sangai Karuppatti Coffie</b><div><a href="#story">Our Coffee</a><a href="#menu">Menu</a><a href="#visit">Visit</a></div></nav>
+
+<header class="hero">
+  <div>
+    <h1>Sip the sweetness of <span>Karuppatti Coffie</span></h1>
+    <p>Palm jaggery coffee and honest South Indian meals, served fresh from morning to night in Sankarankoil.</p>
+    <div class="cta"><a class="btn p" href="#menu">See the menu</a><a class="btn s" href="#visit">Find us</a></div>
+  </div>
+  <div class="scene" id="scene" aria-label="A 3D South Indian thali with idli, dosa, rice, curry and coffee">
+    <div class="world" id="world">
+      <div class="plate"></div>
+      <span class="it" style="left:50%;top:50%;font-size:clamp(3.4rem,9vw,5.6rem)">🍛</span>
+      <span class="it" style="left:50%;top:18%;animation-delay:-.6s">🫓</span>
+      <span class="it" style="left:80%;top:38%;animation-delay:-1.2s">☕</span>
+      <span class="it" style="left:72%;top:78%;animation-delay:-1.8s">🥥</span>
+      <span class="it" style="left:28%;top:78%;animation-delay:-2.4s">🌶️</span>
+      <span class="it" style="left:20%;top:38%;animation-delay:-.3s">🍚</span>
+      <span class="steam" style="margin-left:-90px"></span><span class="steam" style="animation-delay:-1.6s;margin-left:80px"></span>
+    </div>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="story"><div class="in story">
+  <div class="rv">
+    <h2>Coffee the way the village made it</h2>
+    <p class="lead">We sweeten our coffee with karuppatti, the dark palm jaggery that adds a deep, caramel warmth no white sugar can match. Pair it with a hot dosa or soft idli and the day starts right.</p>
+    <div class="facts"><span>Palm jaggery sweetened</span><span>Fresh ground daily</span><span>Ghee and coconut chutney</span></div>
+  </div>
+  <div class="cup rv"><div class="cupbox" aria-hidden="true">☕</div></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="in">
+  <h2 class="rv">Our menu, three times a day</h2>
+  <p class="lead rv">Pick a meal time to see what is on the stove.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <p class="time" id="time"></p>
+  <div class="grid" id="grid"></div>
+  <p class="note">Prices and dishes are samples. Update them to match the real menu.</p>
+</div></section>
+
+<section class="visit" id="visit"><div class="in">
+  <h2 class="rv">Come hungry, leave happy</h2>
+  <p class="lead rv">Walk in for a coffee or sit down for a full meal. We would love to see you.</p>
+  <div class="vgrid">
+    <div class="vc rv"><i>📍</i><h3>Address</h3><p>Sangai Karuppatti Coffie<br><span id="addr">Opposite to Govt.Hostel, Sankarankoil, Tamil Nadu</span></p><p><a href="https://maps.app.goo.gl/PBxPmEukf3GLzwmUA" target="_blank" rel="noopener">Open in Google Maps</a></p></div>
+    <div class="vc rv"><i>📞</i><h3>Call us</h3><p><span id="ph">+91 72003 28392</span></p><p>Ask about parcels and bulk orders.</p></div>
+    <div class="vc rv"><i>🕗</i><h3>Opening hours</h3><p><span id="hrs">6 AM to 10 PM daily</span></p><p>Breakfast, lunch and dinner served.</p></div>
+  </div>
+</div></section>
+
+<footer><b>Sangai Karuppatti Coffie</b><br>Made with love, ghee and a little jaggery. Sankarankoil, Tamil Nadu.</footer>
+
+<script>
+var Q=["Life is better with a hot dosa","Karuppatti coffee: sweet like home","Every idli is a little cloud","Ghee makes everything divine","Good food, good mood","Sip slow, smile more","Spice up your day","Meals served on love"];
+document.getElementById("mq").textContent=(Q.join("   ✦   ")+"   ✦   ").repeat(2);
+var M={
+Breakfast:{t:"6:30 AM to 11:00 AM",c:["#e0a43a","#2f7d52","#c9302a"],i:[
+["Idli (3 pcs)","🍚","Soft steamed rice cakes with sambar and chutney",40,1],
+["Ghee Podi Dosa","🫓","Crisp dosa brushed with ghee and spicy podi",70,1],
+["Medu Vada (2 pcs)","🍩","Golden lentil fritters, crunchy outside, fluffy inside",40,1],
+["Ven Pongal","🥣","Peppery rice and moong dal with ghee and cashew",60,1],
+["Poori Masala","🥔","Puffed poori with warm potato masala",65,1],
+["Karuppatti Coffie","☕","Our signature palm jaggery filter coffee",30,1]]},
+Lunch:{t:"12:00 PM to 3:30 PM",c:["#2f7d52","#c9302a","#d68a1f"],i:[
+["Full Meals","🍛","Rice, sambar, rasam, kootu, poriyal, appalam and payasam",120,1],
+["Curd Rice","🥛","Cool, creamy and tempered with mustard and curry leaves",60,1],
+["Lemon Rice","🍋","Tangy rice with peanuts and green chilli",65,1],
+["Chicken Meals","🍗","Chettinad style chicken curry with rice and sides",170,0],
+["Fish Fry Meals","🐟","Crisp fried fish with rice, rasam and kuzhambu",190,0],
+["Buttermilk","🥤","Spiced, chilled and perfect after a big meal",20,1]]},
+Dinner:{t:"6:30 PM to 10:00 PM",c:["#c9302a","#d68a1f","#2f7d52"],i:[
+["Parotta and Salna","🫓","Flaky layered parotta with spicy salna",70,0],
+["Kothu Parotta","🍳","Shredded parotta tossed with egg, masala and onion",110,0],
+["Chapati and Kurma","🥘","Soft chapati with creamy vegetable kurma",75,1],
+["Idiyappam and Coconut Milk","🥥","String hoppers with sweet coconut milk",65,1],
+["Onion Uthappam","🧅","Thick dosa topped with onion and chilli",70,1],
+["Paal Payasam","🍮","Warm milk dessert with cardamom",45,1]]}};
+var tabs=document.getElementById("tabs"),grid=document.getElementById("grid"),tm=document.getElementById("time");
+function show(k){
+  [].forEach.call(tabs.children,function(b){b.setAttribute("aria-selected",b.dataset.k===k)});
+  tm.textContent=k+" is served "+M[k].t;
+  grid.innerHTML="";
+  M[k].i.forEach(function(d,n){
+    var c=document.createElement("article");c.className="card";c.style.animationDelay=n*70+"ms";
+    c.innerHTML='<div class="pic" style="--c:'+M[k].c[n%3]+'">'+d[1]+'</div><h3>'+d[0]+'</h3><p>'+d[2]+'</p><div class="pr"><b>₹'+d[3]+'</b><span class="veg'+(d[4]?'':' nv')+'">'+(d[4]?'Veg':'Non-veg')+'</span></div>';
+    c.onpointermove=function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.animation="none";c.style.transform="rotateY("+x*18+"deg) rotateX("+-y*18+"deg)"};
+    c.onpointerleave=function(){c.style.transform=""};
+    grid.appendChild(c);
+  });
+}
+Object.keys(M).forEach(function(k){
+  var b=document.createElement("button");b.className="tab";b.textContent=k;b.dataset.k=k;b.setAttribute("role","tab");b.onclick=function(){show(k)};tabs.appendChild(b);
+});
+show("Breakfast");
+/* hero 3D motion */
+var w=document.getElementById("world"),sc=document.getElementById("scene"),base=0,mx=0,still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+sc.addEventListener("pointermove",function(e){var r=sc.getBoundingClientRect();mx=((e.clientX-r.left)/r.width-.5)*50});
+sc.addEventListener("pointerleave",function(){mx=0});
+(function f(t){if(!still){base=Math.sin(t/1800)*14;w.style.setProperty("--rz",(base+mx)+"deg");requestAnimationFrame(f)}})(0);
+/* reveal */
+var io=new IntersectionObserver(function(a){a.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.15});
+[].forEach.call(document.querySelectorAll(".rv"),function(e){io.observe(e)});
+</script>
+</body>
+</html>
